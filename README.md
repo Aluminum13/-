@@ -5,7 +5,7 @@
 项目使用的python版本为3.11  
 该项目目前使用的环境中比较可能影响兼容性的：
 - mph 1.2.3
-- comsol 6.0
+- comsol  6.0
 - bayesian-optimization 1.4.3
 
 次要的：
