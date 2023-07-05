@@ -293,9 +293,10 @@ def initialize_optimizer():
 
 def clear():
     # 清空恢复文件
-    for dir_name in listdir(setting.recoveries_path):
-        if dir_name.startswith('MPHRecovery') and dir_name.endswith('_PM.mph'):
-            shutil.rmtree(setting.recoveries_path + dir_name)
+    if os.path.isdir(setting.recoveries_path):
+        for dir_name in listdir(setting.recoveries_path):
+            if dir_name.startswith('MPHRecovery') and dir_name.endswith('_PM.mph'):
+                shutil.rmtree(setting.recoveries_path + dir_name)
 
     # 清空防爆存档
     os.remove(setting.last_model_save_path)
